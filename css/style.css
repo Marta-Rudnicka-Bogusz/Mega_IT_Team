@@ -173,7 +173,7 @@ article > img {
 aside {
   width: 30%;
   padding: 20px;
-  background-color: darkgrey;
+  background-color: rgb(239, 229, 34);
   border-left: 3px dashed black;
 }
 
@@ -183,11 +183,11 @@ aside {
 
 .widget img {
   float: left;
-  padding: 10px;
-  border: 5px solid brown;
-  margin: 0 10px 5px 0;
-  width: 100px;
-  height: 100px;
+  padding: 20px;
+  border: 5px solid rgb(54, 202, 21);
+  margin: 0 20px 5px 0;
+  width: 200px;
+  height: 200px;
 }
 
 .links > ul {
