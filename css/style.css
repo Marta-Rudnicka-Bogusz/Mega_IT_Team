@@ -51,22 +51,29 @@ header {
 nav > ul {
   list-style-type: none;
 }
-
+/* poprawa stylowania menu */
 nav ul li {
   display: inline-block;
+  background-color: #ffdcae;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-
+nav ul li:hover {
+  background-color: #ced89e;
+}
 nav ul li a {
   font-size: 18px;
-  color: black;
-  padding: 10px 15px;
+  color: #76ba99;
+  padding: 15px;
   text-decoration: none;
+  display: block;
   /* border: 5px solid black; */
 }
 
 nav ul li a:hover {
-  background-color: black;
   color: whitesmoke;
+  border-radius: 20px;
   /* border: 5px solid whitesmoke; */
 }
 
