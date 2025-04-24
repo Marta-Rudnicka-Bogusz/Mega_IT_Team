@@ -77,6 +77,36 @@ nav ul li a:hover {
   /* border: 5px solid whitesmoke; */
 }
 
+.logo-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: #ced89e;
+  color: whitesmoke;
+  font-size: 18px;
+  transition: opacity 0.4s ease;
+  border-radius: 20px;
+}
+
+.logo {
+  position: relative;
+}
+
+.logo img {
+  border-radius: 20px;
+}
+
+.logo-text:hover {
+  opacity: 1;
+}
+
 /* Slider */
 
 .slider {
@@ -101,6 +131,10 @@ nav ul li a:hover {
   background-image: url("https://unsplash.it/500/500?image=143");
 }
 
+.ads1-small {
+  display: none;
+}
+
 .ads1 div {
   width: var(--adswidth);
 }
@@ -109,6 +143,7 @@ nav ul li a:hover {
   visibility: var(--textON);
   color: white;
   text-align: center;
+  margin: 56px 10px 56px 10px;
 }
 
 .ads1 > img {
@@ -237,6 +272,34 @@ footer p {
   text-align: center;
   margin: 0;
 }
+
+/* Stylowanie formularza */
+.element {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  background: #f9f9f9;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.75rem;
+  box-shadow: inset 1px 2px 3px #00000010;
+}
+
+.button {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background: #ab94c6;
+  border: 1px solid #726f6f;
+  border-radius: 0.75rem;
+  box-shadow: inset 1px 2px 3px #00000010;
+}
+
+.label {
+  margin: 8px;
+  display: block;
+}
+
 /* RWD */
 @media (min-width: 768px) and (max-width: 992px) {
   /* CSS rules for screens between 768px and 992px */
@@ -277,5 +340,102 @@ footer p {
   .slider-new .slider-item img {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .slider-new {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .slider-new .slider-item {
+    width: 10;
+  }
+
+  .slider-new .slider-item img {
+    width: 100%;
+    height: 100%;
+  }
+  .slider {
+    display: none;
+  }
+  .ads2 {
+    display: none;
+  }
+
+  main > div {
+    width: 100%;
+  }
+
+  .ads1-small {
+    display: block;
+    width: 100%;
+  }
+  .ads1-small div {
+    width: 100%;
+  }
+
+  .widget img {
+    width: 100%;
+    height: 100%;
+    padding: 8%;
+  }
+  nav {
+    width: 44%;
+    text-align: center;
+  }
+
+  nav li {
+    margin-top: 5px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1201px) {
+  #container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slider,
+  .slider-new {
+    flex-direction: row;
+    align-items: center;
+  }
+  .slider div,
+  .slider-new .slider-item {
+    width: 100%;
+  }
+  .slider div img,
+  .slider-new .slider-item img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider-new {
+    width: 100%;
+    max-width: none;
+  }
+
+  .ads2 {
+    background-color: #ab94c6;
+  }
+
+  nav ul li a {
+    font-size: 28px;
+  }
+  .logo img,
+  .logo-text {
+    width: 130%;
+    font-size: 24px;
+  }
+  .ads1 {
+    width: 200px;
+  }
+  .ads1 div {
+    width: 200px;
   }
 }
