@@ -8,6 +8,7 @@
 
   --textON: visible;
   /* --textON: hidden; */
+  text-align: justify;
 }
 
 * {
@@ -19,12 +20,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-/* img {
-  min-width: 30%;
-  max-width: 100%;
-  height: auto;
-} */
 
 .movie {
   width: 100%;
@@ -39,7 +34,7 @@ body {
   margin: 0 auto;
 }
 
-/* Stylowanie headera czyli logo oraz menu */
+/* styling of header - logo & menu */
 
 header {
   display: flex;
@@ -51,12 +46,12 @@ header {
 nav > ul {
   list-style-type: none;
 }
-/* poprawa stylowania menu */
+/* improved menu styling */
 nav ul li {
   display: inline-block;
   background-color: #ffdcae;
   border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 nav ul li:hover {
@@ -68,13 +63,14 @@ nav ul li a {
   padding: 15px;
   text-decoration: none;
   display: block;
-  /* border: 5px solid black; */
 }
 
 nav ul li a:hover {
   color: whitesmoke;
   border-radius: 20px;
-  /* border: 5px solid whitesmoke; */
+}
+.brand img {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -5px -3px 3px #76ba99;
 }
 
 .logo-text {
@@ -124,10 +120,16 @@ nav ul li a:hover {
   width: 1200px;
   height: 150px;
 }
-
+.brand {
+  width: 25%;
+}
+.brand img {
+  width: 100%;
+}
 .ads1 {
   width: var(--adswidth);
   height: 150px;
+  min-width: 200px; /* change of ads1 min-width to keep it aligned with media query*/
   background-image: url("https://unsplash.it/500/500?image=143");
 }
 
@@ -151,7 +153,7 @@ nav ul li a:hover {
   height: 100%;
 }
 
-/*Stylowanie slider-new */
+/*slider-new styling*/
 .slider-new {
   width: 100%;
   max-width: 1200px;
@@ -221,6 +223,8 @@ aside {
 
 .widget {
   margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
 }
 
 .widget img {
@@ -325,6 +329,14 @@ footer p {
   }
 }
 
+@keyframes banner-slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 @media (min-width: 993px) and (max-width: 1200px) {
   /* CSS rules for screens between 993px and 1200px*/
   .slider,
@@ -340,6 +352,23 @@ footer p {
   .slider-new .slider-item img {
     width: 100%;
     height: 100%;
+  }
+  h1 {
+    font-size: 3em;
+    text-align: left;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  .banner {
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap;
+    position: relative;
+    animation: banner-slide 5s infinite linear;
   }
 }
 
