@@ -8,7 +8,6 @@
 
   --textON: visible;
   /* --textON: hidden; */
-  text-align: justify;
 }
 
 * {
@@ -20,6 +19,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* img {
+  min-width: 30%;
+  max-width: 100%;
+  height: auto;
+} */
 
 .movie {
   width: 100%;
@@ -34,7 +39,7 @@ body {
   margin: 0 auto;
 }
 
-/* styling of header - logo & menu */
+/* Stylowanie headera czyli logo oraz menu */
 
 header {
   display: flex;
@@ -46,12 +51,12 @@ header {
 nav > ul {
   list-style-type: none;
 }
-/* improved menu styling */
+/* poprawa stylowania menu */
 nav ul li {
   display: inline-block;
   background-color: #ffdcae;
   border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 nav ul li:hover {
@@ -63,44 +68,13 @@ nav ul li a {
   padding: 15px;
   text-decoration: none;
   display: block;
+  /* border: 5px solid black; */
 }
 
 nav ul li a:hover {
   color: whitesmoke;
   border-radius: 20px;
-}
-.brand img {
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -5px -3px 3px #76ba99;
-}
-
-.logo-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  background-color: #ced89e;
-  color: whitesmoke;
-  font-size: 18px;
-  transition: opacity 0.4s ease;
-  border-radius: 20px;
-}
-
-.logo {
-  position: relative;
-}
-
-.logo img {
-  border-radius: 20px;
-}
-
-.logo-text:hover {
-  opacity: 1;
+  /* border: 5px solid whitesmoke; */
 }
 
 /* Slider */
@@ -120,21 +94,11 @@ nav ul li a:hover {
   width: 1200px;
   height: 150px;
 }
-.brand {
-  width: 25%;
-}
-.brand img {
-  width: 100%;
-}
+
 .ads1 {
   width: var(--adswidth);
   height: 150px;
-  min-width: 200px; /* change of ads1 min-width to keep it aligned with media query*/
   background-image: url("https://unsplash.it/500/500?image=143");
-}
-
-.ads1-small {
-  display: none;
 }
 
 .ads1 div {
@@ -145,7 +109,6 @@ nav ul li a:hover {
   visibility: var(--textON);
   color: white;
   text-align: center;
-  margin: 56px 10px 56px 10px;
 }
 
 .ads1 > img {
@@ -153,7 +116,7 @@ nav ul li a:hover {
   height: 100%;
 }
 
-/*slider-new styling*/
+/*Stylowanie slider-new */
 .slider-new {
   width: 100%;
   max-width: 1200px;
@@ -223,8 +186,6 @@ aside {
 
 .widget {
   margin-bottom: 50px;
-  position: relative;
-  overflow: hidden;
 }
 
 .widget img {
@@ -276,34 +237,6 @@ footer p {
   text-align: center;
   margin: 0;
 }
-
-/* Stylowanie formularza */
-.element {
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  margin-bottom: 20px;
-  display: block;
-  width: 100%;
-  background: #f9f9f9;
-  border: 1px solid #f0f0f0;
-  border-radius: 0.75rem;
-  box-shadow: inset 1px 2px 3px #00000010;
-}
-
-.button {
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  background: #ab94c6;
-  border: 1px solid #726f6f;
-  border-radius: 0.75rem;
-  box-shadow: inset 1px 2px 3px #00000010;
-}
-
-.label {
-  margin: 8px;
-  display: block;
-}
-
 /* RWD */
 @media (min-width: 768px) and (max-width: 992px) {
   /* CSS rules for screens between 768px and 992px */
@@ -329,14 +262,6 @@ footer p {
   }
 }
 
-@keyframes banner-slide {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
 @media (min-width: 993px) and (max-width: 1200px) {
   /* CSS rules for screens between 993px and 1200px*/
   .slider,
@@ -353,82 +278,10 @@ footer p {
     width: 100%;
     height: 100%;
   }
-  h1 {
-    font-size: 3em;
-    text-align: left;
-  }
-  p {
-    font-size: 1.5em;
-  }
-  h3 {
-    font-size: 2em;
-  }
-  .banner {
-    font-size: 1.5em;
-    font-weight: bold;
-    white-space: nowrap;
-    position: relative;
-    animation: banner-slide 5s infinite linear;
-  }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
-  .slider-new {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .slider-new .slider-item {
-    width: 10;
-  }
-
-  .slider-new .slider-item img {
-    width: 100%;
-    height: 100%;
-  }
-  .slider {
-    display: none;
-  }
-  .ads2 {
-    display: none;
-  }
-
-  main > div {
-    width: 100%;
-  }
-
-  .ads1-small {
-    display: block;
-    width: 100%;
-  }
-  .ads1-small div {
-    width: 100%;
-  }
-
-  .widget img {
-    width: 100%;
-    height: 100%;
-    padding: 8%;
-  }
-  nav {
-    width: 44%;
-    text-align: center;
-  }
-
-  nav li {
-    margin-top: 5px;
-  }
-  nav ul li a {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1201px) {
-  #container {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+@media (max-width: 576px) {
+  /* CSS rules for screens <576px */
   .slider,
   .slider-new {
     flex-direction: row;
@@ -436,35 +289,21 @@ footer p {
   }
   .slider div,
   .slider-new .slider-item {
-    width: 100%;
+    width: 50%;
   }
   .slider div img,
   .slider-new .slider-item img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 30%;
   }
-
-  .slider-new {
-    width: 100%;
-    max-width: none;
-  }
-
   .ads2 {
-    background-color: #ab94c6;
+    display: none;
   }
-
-  nav ul li a {
-    font-size: 28px;
+  main > div {
+    width: 50%;
   }
-  .logo img,
-  .logo-text {
-    width: 130%;
-    font-size: 24px;
-  }
-  .ads1 {
-    width: 200px;
-  }
-  .ads1 div {
-    width: 200px;
+  body > div {
+    flex-direction: row;
+    align-items: center;
   }
 }
