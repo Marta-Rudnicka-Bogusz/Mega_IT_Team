@@ -38,6 +38,7 @@ body {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 20px 15px;
@@ -68,9 +69,6 @@ nav ul li a {
 nav ul li a:hover {
   color: whitesmoke;
   border-radius: 20px;
-}
-.brand img {
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -5px -3px 3px #76ba99;
 }
 
 .logo-text {
@@ -120,12 +118,7 @@ nav ul li a:hover {
   width: 1200px;
   height: 150px;
 }
-.brand {
-  width: 25%;
-}
-.brand img {
-  width: 100%;
-}
+
 .ads1 {
   width: var(--adswidth);
   height: 150px;
@@ -369,6 +362,22 @@ footer p {
     white-space: nowrap;
     position: relative;
     animation: banner-slide 5s infinite linear;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .brand {
+    width: clamp(150px, 20vw, 300px);
+  }
+
+  .brand img {
+    width: 100%;
+    height: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -5px -3px 3px #76ba99;
+    border-radius: 20px;
+  }
+
+  .logo-text {
+    font-size: clamp(14px, 1.5vw, 22px);
   }
 }
 
